@@ -154,11 +154,11 @@ static ngx_int_t ngx_streaming_handler(ngx_http_request_t *r)
     return NGX_DECLINED;
   }
 
-  /* TODO: Win32 */
+  /* TODO: Win32 
   if (r->zero_in_uri)
   {
     return NGX_DECLINED;
-  }
+  } */
 
   rc = ngx_http_discard_request_body(r);
 
