@@ -370,7 +370,7 @@ static void trak_update_index(struct mp4_context_t const* mp4_context,
   {
     struct stss_t* stss = trak->mdia_->minf_->stbl_->stss_;
     unsigned int entries = 0;
-    unsigned int stss_start;
+    unsigned int stss_start __attribute__((__unused__));
     unsigned int i;
 
     for(i = 0; i != stss->entries_; ++i)

@@ -373,8 +373,8 @@ static int esds_read(mp4_context_t const* mp4_context,
   unsigned int tag;
   unsigned int len;
 
-  uint16_t stream_id;
-  unsigned int stream_priority;
+  uint16_t stream_id __attribute__((__unused__));
+  unsigned int stream_priority __attribute__((__unused__));
   unsigned int object_type_id;
   unsigned int stream_type;
   unsigned int buffer_size_db;
@@ -523,10 +523,10 @@ stsd_parse_vide(mp4_context_t const* mp4_context,
       {
         unsigned int sequence_parameter_sets;
         unsigned int picture_parameter_sets;
-        unsigned int configuration_version;
-        unsigned int profile_indication;
-        unsigned int profile_compatibility;
-        unsigned int level_indication;
+        unsigned int configuration_version __attribute__((__unused__));
+        unsigned int profile_indication __attribute__((__unused__));
+        unsigned int profile_compatibility __attribute__((__unused__));
+        unsigned int level_indication __attribute__((__unused__));
 
         sample_entry->codec_private_data_ = buffer;
 
